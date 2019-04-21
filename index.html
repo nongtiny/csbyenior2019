@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/minireset.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Gochi+Hand|Satisfy" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5bamxFAWT9uM3Ha0eTTCBjWC4Zl1UP0o&callback=initMap">
+    </script>
+</head>
+<body>
+    <main class="">
+        <section class="home sec">
+            <div class="stripe"></div>
+            <div class="black-rect" 
+                data-aos="fade-right"
+                data-aos-duration="1300">
+                <div data-aos="fade-up" 
+                    class="logo"
+                    data-aos-delay="600"
+                    data-aos-duration="1000">
+                    <h1>Comsci</h1>
+                    <h1>Byenior Party</h1>
+                    <h1>2019</h1>
+                </div>
+            </div>
+        </section>
+        <section id="theme" class="theme sec">
+            <aside class="side">
+                <div id="baw" 
+                    class="baw baw-shadow"
+                    data-aos="fade-right"
+                    data-aos-delay="1300"
+                    data-aos-duration="1000">
+                    <div id="baw-content" class="baw-content">Black</div>
+                </div>
+            </aside>    
+            <div class="heading">
+                <h1
+                    data-aos="fade-down"
+                    data-aos-delay="100"
+                    data-aos-duration="500">
+                    This year
+                </h1>
+                <h1
+                    data-aos="fade-down"
+                    data-aos-delay="500"
+                    data-aos-duration="500">
+                    The hardest theme ever
+                </h1>
+                <h1 id="black-and-white"
+                    data-aos="fade-right"
+                    data-aos-delay="1200"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    Black & White
+                </h1>
+            </div>
+        </section>
+        <section class="location sec">
+            <div class="letter">
+                <h1>Comsci Byenior Party</h1>
+                <hr class="hr">
+                <p><span>🌈</span> You are all invited</p>
+                <p><span>🎊</span>May 4 <span>・</span> 17.30 - 23.00</p>
+                <p><span>🏨</span> Windsor Suite Hotel Sukhumwit</p>
+                <p><span>🎈</span>Sukhumvit Soi 20, Sukhumvit Road, Bangkok</p>
+                <h2>Travel guide</h2>
+                <hr class="hr2">
+                <p><span>🚈</span><strong>BTS:</strong>    Asoke</p>
+                <p><span>🚌</span><strong>BUS:</strong>     38, 40, 90, 501, 511</p>
+                <p><span>🚕</span><strong>Taxi:</strong>    Swing your hand when see the avaliable taxi, or use Grab</p>
+                <p><span>🚗</span><strong>Own car:</strong>    Open google map, and drive with consciousness</p>                    
+            </div>
+            <div id="map"></div>
+        </section>
+        <section class="ending sec">
+            <div class="date-time">
+                <h1
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    Goodbyes are not forever and not the end.
+                </h1>
+                <h1
+                    data-aos="fade-right"
+                    data-aos-delay="800"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    They simply mean we will miss you until we meet again.
+                </h1>
+                <hr class="hr"
+                    data-aos="fade-right"
+                    data-aos-delay="1200"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                <div data-aos="fade-right"
+                    data-aos-delay="1500"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    <p style="font-family: 'Gochi Hand', cursive;
+                            font-size: 3rem;">See you on 😁</p>
+                    <p>May 4th, 2019</p>
+                    <p>17.30 Onwards</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        AOS.init();
+        $(function() {
+            $.scrollify({
+            section : ".sec",
+            });
+        });
+
+        $.scrollify({
+            section : "section",
+            sectionName : "section-name",
+            interstitialSection : "",
+            easing: 'easeOutExpo',
+            scrollSpeed: 1100,
+            offset : 0,
+            scrollbars: true,
+            standardScrollElements: "",
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll:true,
+            before:function() {},
+            after:function() {},
+            afterResize: AOS.refresh,
+            afterRender: AOS.refresh
+        });
+
+        const baw = document.getElementById('baw')
+        var toggle = 1;
+        const bawColor = document.getElementById('baw-content')
+        const theme = document.getElementById('theme')
+
+        baw.onclick = () => {
+            if (toggle === 1 ) {
+                bawColor.innerHTML = "White"
+                baw.style.backgroundColor = 'white'
+                bawColor.style.color = "black"
+                theme.style.color = "white"
+                theme.style.backgroundColor = "black";
+                toggle = 0
+            } else {
+                bawColor.innerHTML = "Black"
+                baw.style.backgroundColor = 'black'
+                bawColor.style.color = "white"
+                theme.style.color = "black"
+                theme.style.backgroundColor = "white";
+                toggle = 1
+            }
+        }
+        function initMap() {
+            var windsor = {lat: 13.7332745, lng: 100.5635486};
+            var map = new google.maps.Map(
+                document.getElementById('map'), 
+                {
+                    zoom: 18, 
+                    center: windsor
+                });
+            var marker = new google.maps.Marker({position: windsor, map: map});
+        }
+    </script>
+</body>
+</html>
