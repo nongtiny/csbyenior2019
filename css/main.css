@@ -314,8 +314,7 @@ a {
     }
 
     #map {
-        height: 20vh;
-        width: 100vw;
+        display: none;
     }
 
     .letter {
@@ -324,11 +323,11 @@ a {
         flex-direction: column;
         justify-content: flex-start;
         align-items: left;
-        line-height: 2;
+        line-height: 2.5;
         padding: 0;
         background-color: #fff;
         font-size: 0.8rem;
-        width: 100vw;
+        width: 80vw;
         height: 80vh;
     }
     
