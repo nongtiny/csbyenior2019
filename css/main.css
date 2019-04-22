@@ -318,17 +318,17 @@ a {
     }
 
     .letter {
-        color: #000;
+        color: #fff;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: left;
         line-height: 2.5;
         padding: 0;
-        background-color: #fff;
+        background-color:#000;
         font-size: 0.8rem;
         width: 80vw;
-        height: 80vh;
+        height: 100vh;
     }
     
     .letter h1 {
@@ -345,21 +345,21 @@ a {
         margin: 0;
         margin-top: 1px;
         margin-bottom: 1rem;
-        background-color: #000;
+        background-color: #fff;
         width: 6rem;
     }
     
     .letter .hr2 {
         margin-top: 1rem;
         margin-bottom: 1rem;
-        background-color: #000;
+        background-color: #fff;
         width: 3rem;
         margin: 0;
     }
     
     .date-time p {
         display: block;
-        font-size: 0.5rem;
+        font-size: 0.65rem;
         letter-spacing: 0.1rem;
         line-height: 1.5;
         font-weight: 100;
