@@ -215,7 +215,7 @@ a {
 }
 
 
-.baw {
+#baw {
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -228,15 +228,15 @@ a {
     user-select: none;  
     width: 100%;
     height: 100%;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.baw:hover {
-    transform: scale(1.2);
+#baw:hover {
+    transform: scale(1.1);
 }
 
-.baw:active {
-    transform: scale(1.05)
+#baw:active {
+    transform: scale(1)
 }
 
 .baw-shadow {

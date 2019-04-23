@@ -85,8 +85,3 @@
     background-clip: text;
     color: transparent;
 }
-
-.hr {
-    animation-name: fillUp;
-    animation-delay: 1200ms;
-}
